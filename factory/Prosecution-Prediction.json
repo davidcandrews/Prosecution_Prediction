@@ -1,0 +1,9 @@
+{
+	"name": "Prosecution-Prediction",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b192992d-417d-49a1-afc1-47490616cf7a",
+		"tenantId": "94cfddbc-0627-494a-ad7a-29aea3aea832"
+	}
+}
