@@ -116,8 +116,9 @@
 					},
 					"sink": {
 						"type": "AzureTableSink",
-						"azureTableInsertType": "replace",
-						"writeBatchSize": 10000
+						"azureTableInsertType": "merge",
+						"writeBatchSize": 10000,
+						"azureTablePartitionKeyValue": "PartitionKey"
 					},
 					"enableStaging": false,
 					"translator": {
