@@ -1,0 +1,229 @@
+{
+	"name": "table_upload_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "issuance_parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "table_upload.parquet",
+				"container": "prosecution"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "application_number",
+				"type": "UTF8"
+			},
+			{
+				"name": "art_unit_number",
+				"type": "UTF8"
+			},
+			{
+				"name": "examiner_name",
+				"type": "UTF8"
+			},
+			{
+				"name": "office_action_count",
+				"type": "INT64"
+			},
+			{
+				"name": "non_final_office_action_count",
+				"type": "INT64"
+			},
+			{
+				"name": "final_office_action_count",
+				"type": "INT64"
+			},
+			{
+				"name": "continued_examination_request_count",
+				"type": "INT64"
+			},
+			{
+				"name": "approximate_interview_count",
+				"type": "INT64"
+			},
+			{
+				"name": "appeals_count",
+				"type": "INT64"
+			},
+			{
+				"name": "days_to_first_office_action",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "days_to_first_notice_of_allowance",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "filing_date",
+				"type": "INT96"
+			},
+			{
+				"name": "status",
+				"type": "UTF8"
+			},
+			{
+				"name": "status_date",
+				"type": "INT96"
+			},
+			{
+				"name": "grant_date",
+				"type": "INT96"
+			},
+			{
+				"name": "artunit_apps_count",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "artunit_avg_oa",
+				"type": "DECIMAL",
+				"precision": 6,
+				"scale": 5
+			},
+			{
+				"name": "artunit_allowance_rate",
+				"type": "DECIMAL",
+				"precision": 7,
+				"scale": 5
+			},
+			{
+				"name": "artunit_avg_days_to_first_oa",
+				"type": "DECIMAL",
+				"precision": 9,
+				"scale": 5
+			},
+			{
+				"name": "artunit_avg_days_to_first_noa",
+				"type": "DECIMAL",
+				"precision": 9,
+				"scale": 5
+			},
+			{
+				"name": "examiner_apps_count",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "examiner_avg_oa",
+				"type": "DECIMAL",
+				"precision": 6,
+				"scale": 5
+			},
+			{
+				"name": "examiner_allowance_rate",
+				"type": "DECIMAL",
+				"precision": 7,
+				"scale": 5
+			},
+			{
+				"name": "examiner_avg_days_to_first_oa",
+				"type": "DECIMAL",
+				"precision": 9,
+				"scale": 5
+			},
+			{
+				"name": "examiner_avg_days_to_first_noa",
+				"type": "DECIMAL",
+				"precision": 9,
+				"scale": 5
+			},
+			{
+				"name": "initial_claim_score",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "final_claim_score",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "final_status",
+				"type": "UTF8"
+			},
+			{
+				"name": "final_publication_dt",
+				"type": "INT96"
+			},
+			{
+				"name": "claim_score_delta",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "claim_score_slope_oa",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "claim_score_slope_days",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "patented",
+				"type": "INT64"
+			},
+			{
+				"name": "days_to_grant",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "priority",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "priority_office_count",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "au_avg_claim_score",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "au_avg_claim_score_delta",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "au_avg_claim_score_slope_oa",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "au_avg_claim_score_slope_days",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "examiner_avg_claim_score",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "examiner_avg_claim_score_delta",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "examiner_avg_claim_score_slope_oa",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "examiner_avg_claim_score_slope_days",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "au_avg_days_to_grant",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "examiner_avg_days_to_grant",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "RowKey",
+				"type": "UTF8"
+			},
+			{
+				"name": "PartitionKey",
+				"type": "UTF8"
+			}
+		]
+	}
+}
