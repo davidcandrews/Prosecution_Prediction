@@ -1,0 +1,21 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "S3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "aip-genome",
+				"folderPath": "demery/prosecution_prediction",
+				"fileName": "training_data_post2010.parquet"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
