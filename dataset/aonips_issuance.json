@@ -1,18 +1,16 @@
 {
-	"name": "input_s3_parquet",
+	"name": "aonips_issuance",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "S3",
+			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
-				"type": "AmazonS3Location",
-				"bucketName": "aip-genome",
-				"folderPath": "demery/prosecution_prediction",
-				"fileName": "training_data_post2010.parquet"
+				"type": "AzureBlobStorageLocation",
+				"container": "prosecution"
 			},
 			"compressionCodec": "snappy"
 		},

@@ -1,0 +1,15 @@
+{
+	"name": "issance_feature_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "issuance_features_table",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "issuancefeatures"
+		}
+	}
+}
