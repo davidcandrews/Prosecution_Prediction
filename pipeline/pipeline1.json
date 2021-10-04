@@ -55,8 +55,9 @@
 						"mappings": [
 							{
 								"source": {
+									"name": "PartitionKey",
 									"type": "String",
-									"ordinal": 1
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "PartitionKey",
@@ -65,8 +66,9 @@
 							},
 							{
 								"source": {
+									"name": "RowKey",
 									"type": "String",
-									"ordinal": 2
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "RowKey",
@@ -75,18 +77,9 @@
 							},
 							{
 								"source": {
+									"name": "appeals_count",
 									"type": "String",
-									"ordinal": 3
-								},
-								"sink": {
-									"name": "Timestamp",
-									"type": "DateTimeOffset"
-								}
-							},
-							{
-								"source": {
-									"type": "String",
-									"ordinal": 4
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "appeals_count",
@@ -95,8 +88,9 @@
 							},
 							{
 								"source": {
+									"name": "application_number",
 									"type": "String",
-									"ordinal": 5
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "application_number",
@@ -105,8 +99,9 @@
 							},
 							{
 								"source": {
+									"name": "approximate_interview_count",
 									"type": "String",
-									"ordinal": 6
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "approximate_interview_count",
@@ -115,8 +110,9 @@
 							},
 							{
 								"source": {
+									"name": "art_unit_number",
 									"type": "String",
-									"ordinal": 7
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "art_unit_number",
@@ -125,8 +121,9 @@
 							},
 							{
 								"source": {
+									"name": "artunit_allowance_rate",
 									"type": "String",
-									"ordinal": 8
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "artunit_allowance_rate",
@@ -135,8 +132,9 @@
 							},
 							{
 								"source": {
+									"name": "artunit_apps_count",
 									"type": "String",
-									"ordinal": 9
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "artunit_apps_count",
@@ -145,8 +143,9 @@
 							},
 							{
 								"source": {
+									"name": "artunit_avg_days_to_first_noa",
 									"type": "String",
-									"ordinal": 10
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "artunit_avg_days_to_first_noa",
@@ -155,8 +154,9 @@
 							},
 							{
 								"source": {
+									"name": "artunit_avg_days_to_first_oa",
 									"type": "String",
-									"ordinal": 11
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "artunit_avg_days_to_first_oa",
@@ -165,8 +165,9 @@
 							},
 							{
 								"source": {
+									"name": "artunit_avg_oa",
 									"type": "String",
-									"ordinal": 12
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "artunit_avg_oa",
@@ -175,8 +176,9 @@
 							},
 							{
 								"source": {
+									"name": "au_avg_claim_score",
 									"type": "String",
-									"ordinal": 13
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "au_avg_claim_score",
@@ -185,8 +187,9 @@
 							},
 							{
 								"source": {
+									"name": "au_avg_claim_score_delta",
 									"type": "String",
-									"ordinal": 14
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "au_avg_claim_score_delta",
@@ -195,8 +198,9 @@
 							},
 							{
 								"source": {
+									"name": "au_avg_claim_score_slope_days",
 									"type": "String",
-									"ordinal": 15
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "au_avg_claim_score_slope_days",
@@ -205,8 +209,9 @@
 							},
 							{
 								"source": {
+									"name": "au_avg_claim_score_slope_oa",
 									"type": "String",
-									"ordinal": 16
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "au_avg_claim_score_slope_oa",
@@ -215,8 +220,9 @@
 							},
 							{
 								"source": {
+									"name": "au_avg_days_to_grant",
 									"type": "String",
-									"ordinal": 17
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "au_avg_days_to_grant",
@@ -225,8 +231,9 @@
 							},
 							{
 								"source": {
+									"name": "continued_examination_request_count",
 									"type": "String",
-									"ordinal": 18
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "continued_examination_request_count",
@@ -235,8 +242,9 @@
 							},
 							{
 								"source": {
+									"name": "days_to_first_office_action",
 									"type": "String",
-									"ordinal": 19
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "days_to_first_office_action",
@@ -245,8 +253,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_allowance_rate",
 									"type": "String",
-									"ordinal": 20
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_allowance_rate",
@@ -255,8 +264,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_apps_count",
 									"type": "String",
-									"ordinal": 21
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_apps_count",
@@ -265,8 +275,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_avg_claim_score",
 									"type": "String",
-									"ordinal": 22
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_avg_claim_score",
@@ -275,8 +286,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_avg_claim_score_delta",
 									"type": "String",
-									"ordinal": 23
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_avg_claim_score_delta",
@@ -285,8 +297,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_avg_claim_score_slope_days",
 									"type": "String",
-									"ordinal": 24
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_avg_claim_score_slope_days",
@@ -295,8 +308,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_avg_claim_score_slope_oa",
 									"type": "String",
-									"ordinal": 25
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_avg_claim_score_slope_oa",
@@ -305,8 +319,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_avg_days_to_first_noa",
 									"type": "String",
-									"ordinal": 26
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_avg_days_to_first_noa",
@@ -315,8 +330,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_avg_days_to_first_oa",
 									"type": "String",
-									"ordinal": 27
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_avg_days_to_first_oa",
@@ -325,8 +341,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_avg_days_to_grant",
 									"type": "String",
-									"ordinal": 28
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_avg_days_to_grant",
@@ -335,8 +352,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_avg_oa",
 									"type": "String",
-									"ordinal": 29
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_avg_oa",
@@ -345,8 +363,9 @@
 							},
 							{
 								"source": {
+									"name": "examiner_name",
 									"type": "String",
-									"ordinal": 30
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "examiner_name",
@@ -355,8 +374,9 @@
 							},
 							{
 								"source": {
+									"name": "filing_date",
 									"type": "String",
-									"ordinal": 31
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "filing_date",
@@ -365,8 +385,9 @@
 							},
 							{
 								"source": {
+									"name": "final_office_action_count",
 									"type": "String",
-									"ordinal": 32
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "final_office_action_count",
@@ -375,8 +396,9 @@
 							},
 							{
 								"source": {
+									"name": "non_final_office_action_count",
 									"type": "String",
-									"ordinal": 33
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "non_final_office_action_count",
@@ -385,8 +407,9 @@
 							},
 							{
 								"source": {
+									"name": "office_action_count",
 									"type": "String",
-									"ordinal": 34
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "office_action_count",
@@ -395,8 +418,9 @@
 							},
 							{
 								"source": {
+									"name": "patented",
 									"type": "String",
-									"ordinal": 35
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "patented",
@@ -405,8 +429,9 @@
 							},
 							{
 								"source": {
+									"name": "priority",
 									"type": "String",
-									"ordinal": 36
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "priority",
@@ -415,8 +440,9 @@
 							},
 							{
 								"source": {
+									"name": "priority_office_count",
 									"type": "String",
-									"ordinal": 37
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "priority_office_count",
@@ -425,8 +451,9 @@
 							},
 							{
 								"source": {
+									"name": "status",
 									"type": "String",
-									"ordinal": 38
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "status",
@@ -435,8 +462,9 @@
 							},
 							{
 								"source": {
+									"name": "status_date",
 									"type": "String",
-									"ordinal": 39
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "status_date",
@@ -445,8 +473,9 @@
 							},
 							{
 								"source": {
+									"name": "claim_score_delta",
 									"type": "String",
-									"ordinal": 40
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "claim_score_delta",
@@ -455,8 +484,9 @@
 							},
 							{
 								"source": {
+									"name": "days_to_first_notice_of_allowance",
 									"type": "String",
-									"ordinal": 41
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "days_to_first_notice_of_allowance",
@@ -465,8 +495,9 @@
 							},
 							{
 								"source": {
+									"name": "days_to_grant",
 									"type": "String",
-									"ordinal": 42
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "days_to_grant",
@@ -475,8 +506,9 @@
 							},
 							{
 								"source": {
+									"name": "final_claim_score",
 									"type": "String",
-									"ordinal": 43
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "final_claim_score",
@@ -485,8 +517,9 @@
 							},
 							{
 								"source": {
+									"name": "final_publication_dt",
 									"type": "String",
-									"ordinal": 44
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "final_publication_dt",
@@ -495,8 +528,9 @@
 							},
 							{
 								"source": {
+									"name": "final_status",
 									"type": "String",
-									"ordinal": 45
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "final_status",
@@ -505,8 +539,9 @@
 							},
 							{
 								"source": {
+									"name": "grant_date",
 									"type": "String",
-									"ordinal": 46
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "grant_date",
@@ -515,8 +550,9 @@
 							},
 							{
 								"source": {
+									"name": "initial_claim_score",
 									"type": "String",
-									"ordinal": 47
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "initial_claim_score",
@@ -525,8 +561,9 @@
 							},
 							{
 								"source": {
+									"name": "claim_score_slope_days",
 									"type": "String",
-									"ordinal": 48
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "claim_score_slope_days",
@@ -534,6 +571,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "claim_score_slope_oa",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "claim_score_slope_oa",
 									"type": "Double"
