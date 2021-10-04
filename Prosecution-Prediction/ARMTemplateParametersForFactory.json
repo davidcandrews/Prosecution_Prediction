@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Prosecution-Prediction"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"S3_secretAccessKey": {
+			"value": ""
+		},
+		"demery_s3_secretAccessKey": {
+			"value": ""
+		},
+		"issuance_csv_connectionString": {
+			"value": ""
+		},
+		"issuance_features_table_connectionString": {
+			"value": ""
+		},
+		"issuance_parquet_connectionString": {
+			"value": ""
+		},
+		"S3_properties_typeProperties_accessKeyId": {
+			"value": "AKIAZU3UL3BZDUYZWV5O"
+		},
+		"demery_s3_properties_typeProperties_accessKeyId": {
+			"value": "AKIAZU3UL3BZDY3VI3VM"
+		}
+	}
+}
