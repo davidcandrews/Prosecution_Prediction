@@ -1,0 +1,32 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "issuance_parquet",
+						"type": "LinkedServiceReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "issuance_csv",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "issuancefeatures"
+				}
+			],
+			"script": "source(output(\n\t\tapplication_number as string,\n\t\tart_unit_number as string,\n\t\texaminer_name as string,\n\t\toffice_action_count as long,\n\t\tnon_final_office_action_count as long,\n\t\tfinal_office_action_count as long,\n\t\tcontinued_examination_request_count as long,\n\t\tapproximate_interview_count as long,\n\t\tappeals_count as long,\n\t\tdays_to_first_office_action as double,\n\t\tdays_to_first_notice_of_allowance as double,\n\t\tfiling_date as timestamp,\n\t\tstatus as string,\n\t\tstatus_date as timestamp,\n\t\tgrant_date as timestamp,\n\t\tartunit_apps_count as double,\n\t\tartunit_avg_oa as decimal(6,5),\n\t\tartunit_allowance_rate as decimal(7,5),\n\t\tartunit_avg_days_to_first_oa as decimal(9,5),\n\t\tartunit_avg_days_to_first_noa as decimal(9,5),\n\t\texaminer_apps_count as double,\n\t\texaminer_avg_oa as decimal(6,5),\n\t\texaminer_allowance_rate as decimal(7,5),\n\t\texaminer_avg_days_to_first_oa as decimal(9,5),\n\t\texaminer_avg_days_to_first_noa as decimal(9,5),\n\t\tinitial_claim_score as double,\n\t\tfinal_claim_score as double,\n\t\tfinal_status as string,\n\t\tfinal_publication_dt as timestamp,\n\t\tclaim_score_delta as double,\n\t\tclaim_score_slope_oa as double,\n\t\tclaim_score_slope_days as double,\n\t\tpatented as long,\n\t\tdays_to_grant as double,\n\t\tpriority as double,\n\t\tpriority_office_count as double,\n\t\tpriority_office as string[],\n\t\tau_avg_claim_score as double,\n\t\tau_avg_claim_score_delta as double,\n\t\tau_avg_claim_score_slope_oa as double,\n\t\tau_avg_claim_score_slope_days as double,\n\t\texaminer_avg_claim_score as double,\n\t\texaminer_avg_claim_score_delta as double,\n\t\texaminer_avg_claim_score_slope_oa as double,\n\t\texaminer_avg_claim_score_slope_days as double,\n\t\tau_avg_days_to_grant as double,\n\t\texaminer_avg_days_to_grant as double,\n\t\t{__index_level_0__} as long\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'parquet',\n\tcontainer: 'prosecution',\n\tfileName: 'training_data_post2010.parquet') ~> source1\nsource1 derive(RowKey = application_number,\n\t\tPartitionKey = left(application_number,5)) ~> issuancefeatures\nissuancefeatures sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'delimited',\n\tcontainer: 'prosecution',\n\tcolumnDelimiter: ',',\n\tescapeChar: '\\\\',\n\tquoteChar: '\\\"',\n\tcolumnNamesAsHeader: true,\n\tpartitionFileNames:['table_upload.csv'],\n\tsaveOrder: 1,\n\tmapColumn(\n\t\tapplication_number,\n\t\tart_unit_number,\n\t\texaminer_name,\n\t\toffice_action_count,\n\t\tnon_final_office_action_count,\n\t\tfinal_office_action_count,\n\t\tcontinued_examination_request_count,\n\t\tapproximate_interview_count,\n\t\tappeals_count,\n\t\tdays_to_first_office_action,\n\t\tdays_to_first_notice_of_allowance,\n\t\tfiling_date,\n\t\tstatus,\n\t\tstatus_date,\n\t\tgrant_date,\n\t\tartunit_apps_count,\n\t\tartunit_avg_oa,\n\t\tartunit_allowance_rate,\n\t\tartunit_avg_days_to_first_oa,\n\t\tartunit_avg_days_to_first_noa,\n\t\texaminer_apps_count,\n\t\texaminer_avg_oa,\n\t\texaminer_allowance_rate,\n\t\texaminer_avg_days_to_first_oa,\n\t\texaminer_avg_days_to_first_noa,\n\t\tinitial_claim_score,\n\t\tfinal_claim_score,\n\t\tfinal_status,\n\t\tfinal_publication_dt,\n\t\tclaim_score_delta,\n\t\tclaim_score_slope_oa,\n\t\tclaim_score_slope_days,\n\t\tpatented,\n\t\tdays_to_grant,\n\t\tpriority,\n\t\tpriority_office_count,\n\t\tau_avg_claim_score,\n\t\tau_avg_claim_score_delta,\n\t\tau_avg_claim_score_slope_oa,\n\t\tau_avg_claim_score_slope_days,\n\t\texaminer_avg_claim_score,\n\t\texaminer_avg_claim_score_delta,\n\t\texaminer_avg_claim_score_slope_oa,\n\t\texaminer_avg_claim_score_slope_days,\n\t\tau_avg_days_to_grant,\n\t\texaminer_avg_days_to_grant,\n\t\tRowKey,\n\t\tPartitionKey\n\t),\n\tpartitionBy('hash', 1)) ~> sink1"
+		}
+	}
+}
